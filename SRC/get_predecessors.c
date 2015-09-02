@@ -119,6 +119,9 @@ int dfs(char *key, char* result[],PAGENO pgnum,int need, int k){
 
 		}
 
+        /* Because PgNum means the left side(remember for B+ tree Child node is on left side of one key record) 
+            child page no. This case means there are more beyond these left childs, which is the rightmost 
+            child of the parent */
 		if(cmp_result==2 && NumKeys==0){
 
 			push(stack,PagePtr->PtrToFinalRtgPg);
